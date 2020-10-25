@@ -13,10 +13,6 @@ const routes: Routes = [
   { path: 'store', loadChildren: () => import('./store/store.module').then(m => m.StoreModule)},
   { path: 'detail', loadChildren: () => import('./detail/detail.module').then(m => m.DetailModule)},
   { path: '', component: HomeComponent}
-  /*{ path: 'products', component: SearchEngineComponent},
-  { path: 'store', component: StoreComponent},
-  { path: 'detail', component: DetailComponent},
-  { path: '', component: HomeComponent}*/
 ];
 
 @NgModule({
