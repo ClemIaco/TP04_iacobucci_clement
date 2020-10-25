@@ -2,6 +2,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { lettersOnlyValidator, numbersOnlyValidator, postalCodeValidator, emailValidator, matchPasswordValidator } from '../validators'
 import { Client } from '../models/client'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulaire',
@@ -12,6 +13,8 @@ export class FormulaireComponent {
   
   formOk: Boolean = false;
   public client: Client;
+  
+  constructor(private router: Router) {}
   
   public civility: string[] = ['Madame', 'Monsieur'];
   
@@ -63,6 +66,7 @@ export class FormulaireComponent {
     if (this.customerForm.valid)
     {
       this.formOk = true;
+      this.router.navigate(['/products']);
     }
 
     this.client = client;

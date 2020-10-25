@@ -1,10 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DetailComponent } from './detail/detail.component';
 import { FormulaireComponent } from './formulaire/formulaire.component';
+import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { SearchEngineComponent } from './search-engine/search-engine.component';
+import { StoreComponent } from './store/store.component';
 
 const routes: Routes = [
-  //{ path: 'product-list', component: ProductListComponent}
+  { path: 'client-account', loadChildren: () => import('./formulaire/formulaire.module').then(m => m.FormulaireModule)},
+  { path: 'products', loadChildren: () => import('./search-engine/search-engine.module').then(m => m.SearchEngineModule)},
+  { path: 'store', loadChildren: () => import('./store/store.module').then(m => m.StoreModule)},
+  { path: 'detail', loadChildren: () => import('./detail/detail.module').then(m => m.DetailModule)},
+  { path: '', component: HomeComponent}
+  /*{ path: 'products', component: SearchEngineComponent},
+  { path: 'store', component: StoreComponent},
+  { path: 'detail', component: DetailComponent},
+  { path: '', component: HomeComponent}*/
 ];
 
 @NgModule({
