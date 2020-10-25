@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'client-account', loadChildren: () => import('./formulaire/formulaire.module').then(m => m.FormulaireModule)},
   { path: 'products', loadChildren: () => import('./search-engine/search-engine.module').then(m => m.SearchEngineModule)},
   { path: 'store', loadChildren: () => import('./store/store.module').then(m => m.StoreModule)},
-  { path: 'detail', loadChildren: () => import('./detail/detail.module').then(m => m.DetailModule)},
+  { path: 'detail/:id', loadChildren: () => import('./detail/detail.module').then(m => m.DetailModule)},
   { path: '', component: HomeComponent}
 ];
 

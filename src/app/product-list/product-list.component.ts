@@ -23,9 +23,6 @@ export class ProductListComponent {
 
   constructor(private router: Router, private store: Store) { }
 
-  onDetail(){
-    this.router.navigate(['detail']);
-  }
 
    onStore(productSelected: Product){
      this.title = productSelected.title;
