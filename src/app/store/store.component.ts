@@ -3,7 +3,7 @@ import { Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { Product } from '../models/product';
 import { ProductState } from '../../shared/states/product-state'
-import { DeleteProduct } from 'src/shared/actions/product-action';
+import { DeleteProduct } from '../../shared/actions/product-action';
 
 @Component({
   selector: 'app-store',

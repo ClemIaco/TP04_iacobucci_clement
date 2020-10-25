@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { Product } from '../models/product';
-import {AddProduct } from 'src/shared/actions/product-action';
+import {AddProduct } from '../../shared/actions/product-action';
 import { ApiService } from '../services/api.service';
 
 @Component({

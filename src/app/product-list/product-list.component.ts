@@ -5,7 +5,7 @@ import {ApiService} from '../services/api.service';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { Store } from '@ngxs/store';
-import {AddProduct } from 'src/shared/actions/product-action';
+import {AddProduct } from '../../shared/actions/product-action';
 
 @Component({
   selector: 'app-product-list',
